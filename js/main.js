@@ -3,7 +3,7 @@ $(function(){
 	var img = document.getElementById('sampling');
 
 	RGBaster.colors(img, {
-	  paletteSize: 30,					//範囲
+	 					//範囲
 	  exclude: [ 'rgb(255,255,255)' ],  // 除外した色
 	  success: function(payload){
 	    console.log(payload.dominant);
