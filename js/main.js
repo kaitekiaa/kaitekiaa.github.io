@@ -5,7 +5,7 @@ $(function(){
 	
 	img.setAttribute('style','clip: rect( 150px, 450px, 450px, 150px );');      //rect( 上, 右, 下, 左 )
 	
-	$('#kiridasi').prepend("<img src='image/ebisen.JPG' id='sampling' height='600' width='600' alt=''>");
+	$('#kiridasi').append("<img src='image/ebisen.JPG' id='sampling' height='600' width='600' alt=''>");
 	
 	
 
