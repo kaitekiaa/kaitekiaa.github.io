@@ -1,6 +1,12 @@
 
 $(function(){
 	var img = document.getElementById('sampling');
+	
+	
+	img.setAttribute('style','clip: rect( 150px, 150px, 450px, 450px );');
+	
+	
+	
 
 	RGBaster.colors(img, {
 	  paletteSize: 600,					//範囲
