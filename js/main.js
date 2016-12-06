@@ -1,6 +1,6 @@
 
 $(function(){
-	var sampleImage = document.getElementById('sampling');
+	var img = document.getElementById('sampling');
 
 	RGBaster.colors(img, {
 	  paletteSize: 30,
