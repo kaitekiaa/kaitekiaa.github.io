@@ -3,7 +3,7 @@ $(function(){
 	var img = document.getElementById('sampling');
 	
 	
-	img.setAttribute('style','clip: rect( 150px, 150px, 450px, 450px );');
+	img.setAttribute('style','clip: rect( 150px, 450px, 450px, 150px );');      //rect( 上, 右, 下, 左 )
 	
 	
 	
