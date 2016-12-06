@@ -1,11 +1,12 @@
 
 $(function(){
-	var img = document.getElementById('sampling');
+	var img0 = document.getElementById('sampling');
 	
 	//rect( 上, 右, 下, 左 )
 	
-	$('#kiridasi').append("<img src='image/ebisen.JPG' id='sampling' height='300' width='300' alt='' style='clip: rect( 150px, 450px, 450px, 150px );'>");
+	$('#kiridasi').append("<img src='image/ebisen.JPG' id='samp' height='300' width='300' alt='' style='clip: rect( 150px, 450px, 450px, 150px );'>");
 	
+	var img = document.getElementById('samp');
 	
 
 	RGBaster.colors(img, {
