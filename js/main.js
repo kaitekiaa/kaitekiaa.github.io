@@ -1,3 +1,5 @@
+var test = document.getElementById('sampling');
+
 var $img = $('#sampling'), //取得したい画像を取得
      imgW = $img.width(), //画像の横幅を取得
      imgH = $img.height(); //画像の高さを取得
