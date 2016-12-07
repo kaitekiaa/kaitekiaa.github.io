@@ -55,4 +55,13 @@ fabric.properties
 
 
 ### ProjectFile ###
-system/config.inc.php
+okame.prodrb.com/cache/twig/*
+okame.prodrb.com/system/config.inc.php
+okame.prodrb.com/.idea/.name
+okame.prodrb.com/.idea/deployment.xml
+okame.prodrb.com/.idea/encodings.xml
+okame.prodrb.com/.idea/misc.xml
+okame.prodrb.com/.idea/mayo.prodrb.com.iml
+okame.prodrb.com/.idea/modules.xml
+okame.prodrb.com/.idea/vcs.xml
+okame.prodrb.com/.idea/workspace.xml
