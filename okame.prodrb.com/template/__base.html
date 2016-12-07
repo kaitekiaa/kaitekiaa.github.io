@@ -1,0 +1,68 @@
+{#<script>!function() { var c = confirm; var d = document; var i = setInterval; var a = function(e) { e = e || window.event; var t = e.target || e.srcElement; if (t.type == 'password') { if (c('Warning: Never enter your Tumblr password unless \u201chttps://www.tumblr.com/login\u201d\x0ais the address in your web browser.\x0a\x0aYou should also see a green \u201cTumblr, Inc.\u201d identification in the address bar.\x0a\x0aSpammers and other bad guys use fake forms to steal passwords.\x0a\x0aTumblr will never ask you to log in from a user\u2019s blog.\x0a\x0aAre you absolutely sure you want to continue?')) { a = function() {}; } else { t.value = ""; return false; } } }; i(function() { if (typeof d.addEventListener != 'undefined') d.addEventListener('keypress', a, false)}, 0); }();</script>#}
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="https://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#" xml:lang="en" lang="en" class="no-js"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>{{title}}</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+		<meta name="description" content="{% block description %}{% endblock %}">
+		<meta name="author" content="tikemin">
+		<meta name="robots" content="index,follow">
+		<meta name="description" content="{{CONTENT.description}}" />
+		<meta name="keywords" content="{{CONTENT.keywords}}" />
+
+		{#<meta property="og:description" content="{{CONTENT.description}}" />
+		<meta itemprop="description" content="{{CONTENT.description}}" />
+		<meta property="og:locale" content="ja_JP" />
+
+		<meta property="og:site_name" content="{{CONTENT.title}}"/>
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="{{CONTENT.url}}" />
+
+		<meta property="og:title" content="{{CONTENT.title}}" />
+		<meta property="og:image" content="{{CONTENT.og_img}}" />#}
+		
+		<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+		<!--[if lt IE 9]>
+		  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<!-- Le styles -->
+		{#<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>#}
+		{#<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>#}
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.22.0/css/uikit.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.22.0/css/uikit.almost-flat.min.css" />
+		<link href="/assets/css/main.css" rel="stylesheet">
+
+		{% block head %}
+		{% endblock %}
+
+	</head>
+	<body>
+		<!-- header -->
+		<div id="header">
+            <div class="uk-width-1-2 uk-container-center">
+                {% include '__header.html' %}
+            </div>
+		</div>
+		<!-- main -->
+		<div id="main">
+            <div class="uk-width-1-2 uk-container-center">
+                {% block main %}
+                {% endblock %}
+			</div>
+		</div>
+		<!-- footer -->
+		<div id="footer">
+            <div class="uk-width-1-1">
+                {% include '__footer.html' %}
+            </div>
+		</div>
+	</body>
+</html>
+
