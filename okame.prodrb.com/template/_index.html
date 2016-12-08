@@ -1,8 +1,23 @@
 {% extends "__base.html" %}
 
 {% block main %}
-<h1>撮影するところ</h1>
-<p>
-    <input type="button" value="撮るで" onclick="location.href=''">
-</p>
+
+<div class="uk-width-7-10 uk-container-center">
+
+    <h1>マヨ判断テスト</h1>
+    <form class="uk-form" method="post" action="http://okame.prodrb.com/calorie.php">
+
+        <fieldset data-uk-margin>
+            <legend>料理入力</legend>
+            <div class="uk-form-row">
+                <input type="text" placeholder="料理名" name="text">
+                <p class="uk-form-help-block">「えびせん,みそ汁,からあげ,サラダ,チョコ,ご飯,お好み焼き,卵サンド」のうちから好きなの選んで記入（区切りは半角の,）</p>
+            </div>
+
+            <div class="uk-form-row"><button class="uk-button">料理セット</button></div>
+        </fieldset>
+
+    </form>
+
+</div>
 {% endblock %}
