@@ -38,11 +38,11 @@ $(function() {
 			var h = video.offsetHeight;
 
 			//同じサイズをcanvasに指定
-			canvas.setAttribute("width", w);
-			canvas.setAttribute("height", h);
+		//	canvas.setAttribute("width", w);
+		//	canvas.setAttribute("height", h);
 
 			//canvasにコピー
-//			ctx.drawImage(video, 0, 0, w, h);
+			//ctx.drawImage(video, 0, 0, w, h);
 			//imgにpng形式で書き出し
 			img.src = canvas.toDataURL('image/png');
 		}
