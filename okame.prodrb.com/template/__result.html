@@ -1,8 +1,34 @@
 {% extends "__base.html" %}
 
 {% block main %}
-<h1>�B�e����Ƃ���</h1>
-<p>
-    <input type="button" value="�B���" onclick="location.href=''">
-</p>
+<h1>結果表示画面</h1>
+<div>
+    <table class="uk-table">
+        <caption>取得結果</caption>
+        <thead>
+        <tr>
+            <th class="uk-width-3-10">項目</th>
+            <th>詳細</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>料理名</td>
+            <td>{{test.dish_name}}</td>
+        </tr>
+        <tr>
+            <td>総カロリー</td>
+            <td>{{test.calorie.all_calorie}}</td>
+        </tr>
+        <tr>
+            <td>キャラ</td>
+            <td>{{test.character}}</td>
+        </tr>
+        <tr>
+            <td>処理</td>
+            <td>{{test.processing}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 {% endblock %}

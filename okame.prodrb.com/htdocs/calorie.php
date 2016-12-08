@@ -8,17 +8,15 @@ $mayonnaise = new mayonnaise();
 $dish = array();
 
 //画像処理部分から料理名を取得
-//今は仮でここで指定
-$dish = ["えびせん"];
-
+//今は仮でフォームから料理名指定
+//posデータ受け取る
+$test = $mayonnaise->test();
+$dish = $test;
 
 //カロリー計算
 $ans_dish = $mayonnaise->all_calorie($dish);
 
-//$twig->assign('test', $ans_dish);
-//
-//echo $twig->fetch('');
-////マヨネーズかける処理
-//$mayonnaise->decisionMayo($ans_dish);
-
-//画面処理もかかないといけん
+//マヨネーズかける処理
+$test = $mayonnaise->decisionMayo($ans_dish);
+$twig->assign('test', $test);
+echo $twig->fetch('__result.html');
