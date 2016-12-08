@@ -5,8 +5,7 @@ $(function() {
 	var localMediaStream = null;
 	//カメラ使えるかチェック
 	var hasGetUserMedia = function() {
-		return (navigator.getUserMedia || navigator.webkitGetUserMedia ||
-			navigator.mozGetUserMedia || navigator.msGetUserMedia);
+		return (navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
 	};
 
 	//エラー
@@ -24,8 +23,7 @@ $(function() {
 			localMediaStream = stream;
 		}, onFailSoHard);
 	}
-	
-	
+
 	$("#start").click(function() {
 		if (localMediaStream) {
 			var canvas = document.getElementById('canvas');
@@ -47,6 +45,4 @@ $(function() {
 			img.src = canvas.toDataURL('image/png');
 		}
 	});
-	
-	
 });
