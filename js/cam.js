@@ -5,7 +5,8 @@ $(function() {
 	var localMediaStream = null;
 	//カメラ使えるかチェック
 	var hasGetUserMedia = function() {
-		return (navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
+		return (navigator.getUserMedia || navigator.webkitGetUserMedia ||
+			navigator.mozGetUserMedia || navigator.msGetUserMedia);
 	};
 
 	//エラー
@@ -23,7 +24,8 @@ $(function() {
 			localMediaStream = stream;
 		}, onFailSoHard);
 	}
-
+	
+	
 	$("#start").click(function() {
 		if (localMediaStream) {
 			var canvas = document.getElementById('canvas');
@@ -40,9 +42,11 @@ $(function() {
 			canvas.setAttribute("height", h);
 
 			//canvasにコピー
-			ctx.drawImage(video, 0, 0, w, h);
+//			ctx.drawImage(video, 0, 0, w, h);
 			//imgにpng形式で書き出し
 			img.src = canvas.toDataURL('image/png');
 		}
 	});
+	
+	
 });
